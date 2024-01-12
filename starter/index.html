@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Coding Quiz</title>
+    <title>API Coding Quiz</title>
 
     <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
@@ -16,15 +16,17 @@
 
     <div class="wrapper">
       <div id="start-screen" class="start">
-        <h1>Coding Quiz Challenge</h1>
+        <h1 id="h101">Coding Quiz Challenge</h1>
         <p>
           Try to answer the following code-related questions within the time
           limit. Keep in mind that incorrect answers will penalize your
           score/time by ten seconds!
         </p>
+        <!-- Added link to questions js -->
         <button id="start">Start Quiz</button>
       </div>
 
+    <!-- <div class="questionswrapper"> -->
       <div id="questions" class="hide">
         <h2 id="question-title"></h2>
         <div id="choices" class="choices"></div>
