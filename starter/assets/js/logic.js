@@ -1,34 +1,67 @@
-// INTERACTIVITY
 
-
-// * Create start button that when clicked a timer starts and the first question appears.
-//EVENT LISTENER - 
-function startQuiz (){
-
-    document.getElementById("h101").innerHTML = "Question1";
-    
-
-//     <div id="start-screen" class="start">
-//     <h1>Coding Quiz Challenge</h1>
-//     <p>
-//       Try to answer the following code-related questions within the time
-//       limit. Keep in mind that incorrect answers will penalize your
-//       score/time by ten seconds!
-//     </p>
-//     <!-- Added link to questions js -->
-//     <button id="start">Start Quiz</button>
-//   </div>
-
-}
 
 var startButton = document.querySelector("#start")
 startButton.addEventListener("click", startQuiz);
+
+let questionIndex = 0
+// let availableQuestions = [... questionsList]
+// let questionslist = []
+// let correctAnswers = []
+// function questionCounter {}
+
+// * Create start button that when clicked a timer starts and the first question appears.
+//EVENT LISTENER - 
+
+var questionTitle = document.getElementById("question-title")
+
+
+function startQuiz (){
+document.querySelector("#start-screen").innerHTML=""
+document.getElementById("questions").classList.remove("hide")
+questionTitle.textContent=questionsList[0].question;
+generateAnswerButtons()
+
+
+
+//     document.getElementById("h101").innerHTML = "Question1";
+//     document.getElementById("questionText").innerHTML = "This is the question";
+// availableQuestions= [... questionsList]
+// console.log(availableQuestions)
+}
+
+function generateAnswerButtons() {
+    var answerChoicesArray=questionsList[questionIndex].options
+
+for (var i=0;i<answerChoicesArray.length;i++) {
+var answerButton=document.createElement("button")
+answerButton.textContent=answerChoicesArray[i]
+document.getElementById("choices").appendChild(answerButton)
+answerButton.addEventListener("click", checkAnswer)
+}
+}
+
+function checkAnswer (){
+console.log("checkanswerfunctionworked") //replace with code to check answers
+
+}
+
+//counter
+// var counter = 60
+// setInterval (function () {
+//     counter - 1
+//     console.log(counter)
+//     },1000)
 
 // * Questions contain buttons for each answer.
 // BUTTONS HTML - DOCUMENT - IF STATEMENTS
 
 // * When answer is clicked, the next question appears
-//RETURN NEXT SECTION
+// function getNewQuestion() {
+
+
+// }
+
+// getNewQuestion()
 
 
 // * If the answer clicked was incorrect then subtract time from the clock
