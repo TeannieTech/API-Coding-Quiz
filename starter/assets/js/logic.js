@@ -1,14 +1,22 @@
 var startButton = document.querySelector("#start");
 startButton.addEventListener("click", startQuiz);
 
-let questionIndex = 0;
 
-//counter - leave at top as runs in order
-// var counter = 60
-// setInterval (function () {
-//     counter - 1
-//     console.log(counter)
-//     },1000)
+let questionIndex = 0;
+var timeRemaining=60;
+
+
+var counter = 60
+setInterval (function () {
+    counter -1
+    },1000)
+
+    // getting the number of counter
+
+// document.getElementById("time").classList.add("hide")
+document.getElementById("time").innerHTML=counter
+
+
 
 
 // * Create start button that when clicked a timer starts and the first question appears.
@@ -70,6 +78,7 @@ function saveScores (){
     //submit using botton
     //save in local storage
     //send to HTML high scores - info from local storage and apply to page (should happen on scores js)
+    // window.location.href = "./highscores.html";
 }
 //event listener for button
 
