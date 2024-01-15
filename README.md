@@ -29,7 +29,7 @@ Create a code quiz that contains the following requirements:
   * 
   * If the answer clicked was incorrect then subtract time from the clock
 
-* The quiz should end when all questions are answered or the timer reaches 0.
+* The quiz should end when all questions are answered or the timer reaches 0. //if statement
 
   * When the game ends, it should display their score and give the user the ability to save their initials and their score
   

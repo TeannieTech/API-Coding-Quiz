@@ -1,7 +1,7 @@
 const questionsList = [
     {
         question: "What is the correct way to declare a variable in JavaScript?",
-        options: ["variable x", "var x;", "x = variable"],
+        options: ["variable x", "var x", "x = variable"],
         correctAnswer: "var x"
     },
     {
@@ -33,9 +33,6 @@ const questionsList = [
 
 //loop through each, check what they click, do logic inside loop. each click will check if correct. will tally on counter
 //var - number of correct answers
-//quesion1.answer 
-//can just put question as will be looped through
+
 //loop - if this answers this then do that. no need to write for each one
 
-
-//if correct go to next one in the loop
