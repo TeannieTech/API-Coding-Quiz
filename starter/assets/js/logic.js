@@ -6,15 +6,18 @@ let questionIndex = 0;
 var timeRemaining=60;
 
 
+
 var counter = 60
+
+
 setInterval (function () {
-    counter -1
-    },1000)
+    counter = counter - 1
+    document.getElementById("time").innerHTML=counter
+},1000)
 
-    // getting the number of counter
 
-// document.getElementById("time").classList.add("hide")
-document.getElementById("time").innerHTML=counter
+
+// setInterval()
 
 
 
