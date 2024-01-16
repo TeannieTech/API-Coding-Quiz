@@ -23,6 +23,7 @@ function startQuiz() {
     
     }
 
+
   }, 1000);
 }
 
@@ -65,6 +66,7 @@ function endGame() {
   document.getElementById("questions").classList.add("hide");
   document.getElementById("end-screen").classList.remove("hide");
   document.getElementById("final-score").innerHTML = counter;
+  clearInterval(countDownTimer);
 }
 
 function saveScores() {
