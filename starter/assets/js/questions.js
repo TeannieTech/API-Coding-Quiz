@@ -5,7 +5,7 @@ const questionsList = [
         correctAnswer: "var x"
     },
     {
-        question: "Which function is used to display a message in the browser console",
+        question: "Which function is used to display a message in the browser console?",
         options: ["alert()", "console.log()", "messageBox()"],
         correctAnswer: "console.log()"
     },
@@ -17,7 +17,7 @@ const questionsList = [
     },
     
     {
-        question: "How do you comment a single line of code in JavaScript",
+        question: "How do you comment a single line of code in JavaScript?",
         options: ["/* Comment */", "// Comment", "<!-- Comment -->"],
         correctAnswer: "// Comment"
     },
