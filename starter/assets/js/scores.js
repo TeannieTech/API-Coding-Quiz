@@ -6,6 +6,9 @@
 //     if (!email || !password) {
 //       return;
 //     }
+
+// document.getElementById("myScore").innerHTML =
+// person+ " " +score
   
 //     userEmailSpan.textContent = email;
 //     userPasswordSpan.textContent = password;

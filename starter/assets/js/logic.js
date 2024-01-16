@@ -18,6 +18,7 @@ function startQuiz() {
     document.getElementById("time").innerHTML=counter
     if (counter < 0){
         endGame ()
+    
     }
 },1000)
 
@@ -45,7 +46,7 @@ function checkAnswer() {
   if (this.textContent === possibleAnswersArray) {
     alert("Correct answer!");
   } else {
-    alert("Incorrect answer!");
+    alert("Incorrect answer!"),(counter = counter - 10)
   }
 
   questionIndex++
