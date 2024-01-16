@@ -4,39 +4,22 @@ startButton.addEventListener("click", startQuiz);
 
 let questionIndex = 0;
 var timeRemaining=60;
-
-
-
 var counter = 60
-
-
-// setInterval (function () {
-//     counter = counter - 1
-//     document.getElementById("time").innerHTML=counter
-// },1000)
-
-
-
-// setInterval()
-
-
-
-
-// * Create start button that when clicked a timer starts and the first question appears.
-//EVENT LISTENER - timer
-
 var questionTitle = document.getElementById("question-title");
+
 
 function startQuiz() {
   document.querySelector("#start-screen").classList.add("hide");
   document.getElementById("questions").classList.remove("hide");
-  generateAnswerButtons(); // execute timer function
-  
+  generateAnswerButtons();
+
   setInterval (function () {
     counter = counter - 1
     document.getElementById("time").innerHTML=counter
+    if (counter < 0){
+        endGame ()
+    }
 },1000)
-
 
 }
 
