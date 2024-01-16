@@ -14,7 +14,7 @@ function startQuiz() {
   countDownTimer = setInterval(function () {
     counter = counter - 1;
     document.getElementById("time").innerHTML = counter;
-    if (counter < 0) {
+    if (counter <= 0) {
       endGame();
     }
 
@@ -22,7 +22,6 @@ function startQuiz() {
         clearInterval(countDownTimer);
     
     }
-
 
   }, 1000);
 }
@@ -67,9 +66,18 @@ function endGame() {
   document.getElementById("end-screen").classList.remove("hide");
   document.getElementById("final-score").innerHTML = counter;
   clearInterval(countDownTimer);
+
+  var submitScores = document.getElementById("submit");
+  submitScores.addEventListener("click", saveScores);
+  
 }
 
+
+
 function saveScores() {
+
+    alert("selected submit")
+
   //enter name
   //submit using botton
   //save in local storage

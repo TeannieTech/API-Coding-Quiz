@@ -19,7 +19,9 @@ I was asked to create a code quiz that contains the following requirements:
 
 <!-- * The quiz should end when all questions are answered or the timer reaches 0.  -->
 
-  * When the game ends, it should display their score and give the user the ability to save their initials and their score
+  <!-- * When the game ends, it should display their score and give  -->
+
+  the user the ability to save their initials and their score
   
 
 
