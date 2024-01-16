@@ -4,37 +4,40 @@
 I was asked to create a code quiz that contains the following requirements:
 
 * A start button that when clicked a timer starts and the first question appears.
- 
-  * Questions contain buttons for each answer.
-  * 
-  * When answer is clicked, the next question appears
-  * 
-  * If the answer clicked was incorrect then subtract time from the clock
-
+* Questions contain buttons for each answer.
+* When answer is clicked, the next question appears
+* If the answer clicked was incorrect then subtract time from the clock
 * The quiz should end when all questions are answered or the timer reaches 0. 
-
 * When the game ends, it should display their score and give the user the ability to save their initials and their score.
 
-I wanted to further my knowledge of Javascript and API's by creating a quiz. My motivation was to improve my confidence through practice. I became more confident in DOM's, local storage and timers.
+I wanted to further my knowledge of Javascript and API's by creating a quiz. My motivation was to improve my confidence through practice. I became more confident in DOM's, local storage and creating and pausing timers.
 
 
 ## Usage
 
-* Press the start button to start the quiz. 
-Provide instructions and examples for use. Include screenshots as needed.
+link to my deployed project: 
 
-* The timer will start and will be deducted by 10 seconds for every incorrect answer.
+
+* Press the 'Start Quiz' button to start the quiz. 
+
+* The timer will start and time will be deducted by 10 seconds for every incorrect answer.
 
 * Once the game ends, please enter your initials to be added to the high scores list. 
 
 * You will then be taken to the high score list where you can see your results.
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
 
 ![alt text](/starter/assets/quizscreenshot.png)
 
 ## Credits
 
+- https://dobrian.github.io/cmp/topics/sample-recording-and-playback-with-web-audio-api/1.loading-and-playing-sound-files.html#:~:text=Method%202%3A%20JavaScript,back%20the%20sound%20with%20the%20.
+
+- https://dev.to/colelevy/queryselector-vs-getelementbyid-166n#:~:text=querySelector()%20can%20also%20be,be%20helpful%20in%20certain%20situations.&text=getElementById()%20is%20useful%20when,always%20return%20the%20correct%20element.
+
+- https://www.altcademy.com/blog/how-to-display-text-in-javascript/
+
+- https://codepen.io/nony14/pen/VwYREgr
 
 
 ## License
@@ -71,7 +74,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 
 SOFTWARE.
----
 
 
 
