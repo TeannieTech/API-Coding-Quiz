@@ -10,10 +10,10 @@ var timeRemaining=60;
 var counter = 60
 
 
-setInterval (function () {
-    counter = counter - 1
-    document.getElementById("time").innerHTML=counter
-},1000)
+// setInterval (function () {
+//     counter = counter - 1
+//     document.getElementById("time").innerHTML=counter
+// },1000)
 
 
 
@@ -31,6 +31,13 @@ function startQuiz() {
   document.querySelector("#start-screen").classList.add("hide");
   document.getElementById("questions").classList.remove("hide");
   generateAnswerButtons(); // execute timer function
+  
+  setInterval (function () {
+    counter = counter - 1
+    document.getElementById("time").innerHTML=counter
+},1000)
+
+
 }
 
 function generateAnswerButtons() {
