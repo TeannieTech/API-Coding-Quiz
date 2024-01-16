@@ -4,7 +4,7 @@ startButton.addEventListener("click", startQuiz);
 
 let questionIndex = 0;
 var timeRemaining=60;
-var counter = 60
+var counter = 100
 var questionTitle = document.getElementById("question-title");
 
 
@@ -64,6 +64,7 @@ function checkAnswer() {
 function endGame (){
     document.getElementById("questions").classList.add("hide")
     document.getElementById("end-screen").classList.remove("hide")
+    document.getElementById("final-score").innerHTML=(counter)
 //stop timer - used as the score - what is left on counter will be the score
 }
 
