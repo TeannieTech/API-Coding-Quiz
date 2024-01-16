@@ -30,9 +30,3 @@ const questionsList = [
 ]
 
 
-
-//loop through each, check what they click, do logic inside loop. each click will check if correct. will tally on counter
-//var - number of correct answers
-
-//loop - if this answers this then do that. no need to write for each one
-

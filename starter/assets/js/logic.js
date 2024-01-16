@@ -2,7 +2,7 @@ var startButton = document.querySelector("#start");
 startButton.addEventListener("click", startQuiz);
 
 let questionIndex = 0;
-var timeRemaining = 60;
+// var timeRemaining = 60;
 var counter = 100;
 var questionTitle = document.getElementById("question-title");
 
@@ -16,12 +16,14 @@ function startQuiz() {
     document.getElementById("time").innerHTML = counter;
     if (counter <= 0) {
       endGame();
+      clearInterval(countDownTimer);
+      return
     }
 
-    if (counter <= 0) {
-        clearInterval(countDownTimer);
+    // if (counter <= 0) {
+    //     clearInterval(countDownTimer);
     
-    }
+    // }
 
   }, 1000);
 }
@@ -51,7 +53,7 @@ function checkAnswer() {
   } else {
     alert("Incorrect answer!"), (counter = counter - 10);
   }
-
+console.log(counter)
   questionIndex++;
   if (questionIndex >= questionsList.length) {
     endGame();
@@ -64,6 +66,7 @@ function checkAnswer() {
 function endGame() {
   document.getElementById("questions").classList.add("hide");
   document.getElementById("end-screen").classList.remove("hide");
+  document.getElementById("time").innerHTML = counter;
   document.getElementById("final-score").innerHTML = counter;
   clearInterval(countDownTimer);
 
@@ -73,15 +76,33 @@ function endGame() {
 }
 
 
-
 function saveScores() {
 
     alert("selected submit")
+var submitInitials = document.getElementById("initials").value.trim 
 
-  //enter name
-  //submit using botton
-  //save in local storage
-  //send to HTML high scores - info from local storage and apply to page (should happen on scores js)
-  // window.location.href = "./highscores.html";
+
+if (submitInitials === "") {
+    alert("please try again")
+    saveScores()
 }
-//event listener for button
+    else (submitInitials !== "") {
+        var highscores = JSON.parse(window.localStorage.getItem("highscores") || []) 
+  
+    var newScore = 
+        submitInitials:submitInitials, 
+        score:counter
+    
+  highscores.push(newScore)
+  window.localStorage.setItem("highscores",JSON.stringify(highscores))
+    
+  var seeScores = window.location.href="highscores.html";}
+  
+  
+}
+
+
+
+
+//go to scores js
+
