@@ -1,7 +1,7 @@
 var startButton = document.querySelector("#start");
 startButton.addEventListener("click", startQuiz);
 
-let questionIndex = 0;
+let questionIndex = 4;
 // var timeRemaining = 60;
 var counter = 100;
 var questionTitle = document.getElementById("question-title");
@@ -17,14 +17,13 @@ function startQuiz() {
     if (counter <= 0) {
       endGame();
       clearInterval(countDownTimer);
-      return
+      return;
     }
 
     // if (counter <= 0) {
     //     clearInterval(countDownTimer);
-    
-    // }
 
+    // }
   }, 1000);
 }
 
@@ -53,7 +52,7 @@ function checkAnswer() {
   } else {
     alert("Incorrect answer!"), (counter = counter - 10);
   }
-console.log(counter)
+  console.log(counter);
   questionIndex++;
   if (questionIndex >= questionsList.length) {
     endGame();
@@ -72,37 +71,30 @@ function endGame() {
 
   var submitScores = document.getElementById("submit");
   submitScores.addEventListener("click", saveScores);
-  
 }
-
 
 function saveScores() {
+  // alert("selected submit");
+  var submitInitials = document.getElementById("initials").value.trim();
 
-    alert("selected submit")
-var submitInitials = document.getElementById("initials").value.trim 
+  //make sure value isn't empty - see if info is in ls
+  if (submitInitials !== "") {
+    var highscores = 
+    JSON.parse(window.localStorage.getItem("highscores")) || [];
 
+    // format new score object for user
+    var newScore = {
+      submitInitials: submitInitials,
+      score: counter,
+    };
 
-if (submitInitials === "") {
-    alert("please try again")
-    saveScores()
+    //Save to local storage - setting in hs ls
+    highscores.push(newScore);
+    window.localStorage.setItem("highscores", JSON.stringify(highscores));
+
+    //redirect
+    window.location.href = "highscores.html";
+  }
 }
-    else (submitInitials !== "") {
-        var highscores = JSON.parse(window.localStorage.getItem("highscores") || []) 
-  
-    var newScore = 
-        submitInitials:submitInitials, 
-        score:counter
-    
-  highscores.push(newScore)
-  window.localStorage.setItem("highscores",JSON.stringify(highscores))
-    
-  var seeScores = window.location.href="highscores.html";}
-  
-  
-}
-
-
-
 
 //go to scores js
-
