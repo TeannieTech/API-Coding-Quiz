@@ -1,8 +1,7 @@
 var startButton = document.querySelector("#start");
 startButton.addEventListener("click", startQuiz);
 
-let questionIndex = 4;
-// var timeRemaining = 60;
+let questionIndex = 0;
 var counter = 100;
 var questionTitle = document.getElementById("question-title");
 
@@ -20,13 +19,10 @@ function startQuiz() {
       return;
     }
 
-    // if (counter <= 0) {
-    //     clearInterval(countDownTimer);
-
-    // }
   }, 1000);
 }
 
+//generate answer
 function generateAnswerButtons() {
   questionTitle.textContent = questionsList[questionIndex].question;
   var answerChoicesArray = questionsList[questionIndex].options;
@@ -39,16 +35,15 @@ function generateAnswerButtons() {
   }
 }
 
-//need to complete check answer button
+//check Answer
 function checkAnswer() {
   var possibleAnswersArray = questionsList[questionIndex].correctAnswer;
   console.log(this.textContent);
   console.log(possibleAnswersArray);
 
-  //if options(=possibleAmswersArray)
   if (this.textContent === possibleAnswersArray) {
     alert("Correct answer!");
-    // document.getElementById("results").innerHTML=("Correct");
+   
   } else {
     alert("Incorrect answer!"), (counter = counter - 10);
   }
@@ -74,7 +69,7 @@ function endGame() {
 }
 
 function saveScores() {
-  // alert("selected submit");
+
   var submitInitials = document.getElementById("initials").value.trim();
 
   //make sure value isn't empty - see if info is in ls
@@ -87,7 +82,7 @@ function saveScores() {
       submitInitials: submitInitials,
       score: counter,
     };
-
+    
     //Save to local storage - setting in hs ls
     highscores.push(newScore);
     window.localStorage.setItem("highscores", JSON.stringify(highscores));
@@ -97,4 +92,4 @@ function saveScores() {
   }
 }
 
-//go to scores js
+
