@@ -89,7 +89,6 @@ li:nth-child(odd) {
 
 .background {
 background-image: url(/starter/assets/lightbackground.png);
-/* background-repeat: no-repeat; */
 background-size: cover;
 }
 
