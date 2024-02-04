@@ -1,8 +1,8 @@
 const questionsList = [
     {
         question: "What is the correct way to declare a variable in JavaScript?",
-        options: ["variable x", "var x", "x = variable"],
-        correctAnswer: "var x"
+        options: ["variable x", "let x", "x = let"],
+        correctAnswer: "let x"
     },
     {
         question: "Which function is used to display a message in the browser console?",

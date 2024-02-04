@@ -86,3 +86,15 @@ li:nth-child(odd) {
   top: 10px;
   right: 10px;
 }
+
+.background {
+background-image: url(/starter/assets/lightbackground.png);
+/* background-repeat: no-repeat; */
+background-size: cover;
+}
+
+.scoresbackground {
+  background-image: url(/starter/assets/bluebackground.png);
+  background-size: cover;
+}
+
