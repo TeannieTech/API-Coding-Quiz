@@ -15,7 +15,7 @@ I wanted to further my knowledge of Javascript and API's by creating a quiz. My 
 
 ## Usage
 
-link to my deployed project: 
+link to my deployed project: https://teannietech.github.io/API-Coding-Quiz/
 
 
 * Press the 'Start Quiz' button to start the quiz. 
