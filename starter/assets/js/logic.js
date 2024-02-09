@@ -5,6 +5,8 @@ let questionIndex = 0;
 var counter = 100;
 var questionTitle = document.getElementById("question-title");
 
+
+
 function startQuiz() {
   document.querySelector("#start-screen").classList.add("hide");
   document.getElementById("questions").classList.remove("hide");
